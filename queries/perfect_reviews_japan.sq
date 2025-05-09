@@ -1,0 +1,15 @@
+SELECT r.BookingID, r.ReviewText
+FROM Bookings b
+JOIN Review r ON b.BookingID = r.BookingID
+WHERE b.BookingID IN (
+    SELECT r.BookingID
+    FROM Review r
+    WHERE r.ReviewRating = 5
+    AND r.BookingID IN (
+        SELECT b.BookingID
+        FROM Bookings b
+        JOIN Batch ba ON b.BatchID = ba.BatchID
+        JOIN Package p ON ba.PackageID = p.PackageID
+        WHERE p.Country = 'Japan'  
+        )
+    );
