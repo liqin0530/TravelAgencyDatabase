@@ -1,0 +1,13 @@
+SELECT p.BookingID, b.BookingDate, SUM(p.PayPrice) AS "Total Amount Paid by Sally Smith"
+FROM Customers c
+JOIN Bookings b ON c.CustomerID = b.CustomerID
+JOIN Payment p ON b.BookingID = p.BookingID
+WHERE (c.CustName = 'Sally Smith')
+AND (b.BookingDate= (
+    SELECT MAX(b.BookingDate)
+    FROM Payment p
+    JOIN Bookings b ON p.BookingID = b.BookingID
+    JOIN Customers c ON b.CustomerID = c.CustomerID
+    WHERE c.CustName = 'Sally Smith'
+    ))
+GROUP BY p.BookingID, b.BookingDate
