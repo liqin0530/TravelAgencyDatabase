@@ -1,28 +1,26 @@
-# Database Design & Implementation for Travel Agency Management System
+📊 T&J Travel Agency – Database Design & Implementation (Oracle APEX)
+This project is a relational database system developed using Oracle APEX for T&J Travel Agency, as part of a university assignment. It focuses on managing customer details, bookings, payments, travel packages, employees, and customer reviews in a structured and efficient way.
 
-# T&J Travel Agency Database System
+🔍 Overview
+The system was designed with the goal of improving data organisation, enabling personalised travel experiences, and enhancing customer satisfaction tracking for the fictional T&J Travel Agency.
 
-This project is a relational database system developed for T&J Travel Agency as part of a university assignment. It focuses on managing customer information, bookings, payments, travel packages, employee details, and customer reviews.
+🧱 Key Features
+📅 Customer Bookings & Payments: Track and manage all booking histories and payment records
 
-## 🔍 Overview
+🌍 Travel Packages: Organise packages by country, language, and schedule
 
-The system is designed to improve data organisation, support personalised travel experiences, and enhance customer satisfaction tracking.
+👥 Employee & Manager Records: Maintain structured details of staff and reporting hierarchy
 
-## 🧱 Features
+🌟 Customer Reviews: Store reviews for performance insights and marketing strategies
 
-- Manage customer bookings and payment records
-- Store and retrieve travel package details
-- Track employee information and responsibilities
-- Record customer reviews for quality assessment
-- Enforce business rules and data constraints
+📐 Data Integrity: Business rules and constraints implemented to ensure consistency
 
-## 🛠️ Tools & Technologies
+🛠️ Tools & Technologies
+Oracle APEX – Platform for developing, testing, and running SQL queries via SQL Workshop
 
-- **Oracle SQL** – for database design and implementation
-- **Entity Relationship Diagram (ERD)** – used for planning and normalisation
-- **Team collaboration** – Project completed in a group of 5, with individual ownership over specific database components
+Oracle SQL – Used for schema creation, constraints, and query logic
 
-## 📌 Notes
+Entity Relationship Diagram (ERD) – For planning relationships and database structure
 
-This database system was developed for academic purposes. It demonstrates database normalisation, relationship design, and query writing but is not deployed in a live environment.
-
+📌 Notes
+This database system was developed for academic purposes and serves as a demonstration of relational database design, normalisation, query writing, and practical application using Oracle APEX. It is not deployed in a live commercial environment.
