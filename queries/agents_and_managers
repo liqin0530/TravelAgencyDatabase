@@ -1,0 +1,6 @@
+SELECT e.EmpID, e.EmpName, e.EmpContact, e.EmpEmail, 
+       e.EmpGender, e.EmpYrsWorked, m.EmpName as "Travel Manager"
+FROM Employee e
+JOIN Employee m ON e.MgrID = m.EmpID
+WHERE e.EmpPos = 'Travel Agent' 
+AND m.EmpPos like '%Manager%'
