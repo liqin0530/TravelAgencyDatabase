@@ -1,0 +1,10 @@
+SELECT c.CustomerID, c.CustName, c.CustGender, c.CustContact, c.CustEmail
+FROM Customers c
+JOIN Bookings b ON c.CustomerID = b.CustomerID
+
+MINUS
+
+SELECT c.CustomerID, c.CustName, c.CustGender, c.CustContact, c.CustEmail
+FROM Customers c
+JOIN Bookings b ON c.CustomerID = b.CustomerID
+WHERE b.BookingDate >= ADD_MONTHS(SYSDATE, -12) 
